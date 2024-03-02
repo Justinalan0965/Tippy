@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--left side-->
+    <TextView
+
+        android:id="@+id/tbBase"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Base"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tbPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="15%"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tbBase"
+        app:layout_constraintTop_toBottomOf="@+id/tbBase" />
+
+    <TextView
+        android:id="@+id/tbTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Tip"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/tbBase"
+        app:layout_constraintTop_toBottomOf="@+id/tbPercent" />
+
+    <TextView
+        android:id="@+id/tbtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/tbBase"
+        app:layout_constraintTop_toBottomOf="@+id/tbTipAmount" />
+
+    <TextView
+        android:id="@+id/tbMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Members"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/tbBase"
+        app:layout_constraintTop_toBottomOf="@+id/tbtotal"
+        />
+
+    <TextView
+        android:id="@+id/tbEach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Each"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tbMembers"
+        app:layout_constraintEnd_toEndOf="@id/tbBase"
+        />
+
+    <!--    right side  -->
+    <EditText
+        android:id="@+id/etBasevalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tbBase"
+        app:layout_constraintStart_toEndOf="@+id/tbBase"
+         />
+
+    <TextView
+        android:id="@+id/etTipAmout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="12.5"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tbTipAmount"
+        app:layout_constraintStart_toEndOf="@+id/tbTipAmount" />
+
+    <TextView
+        android:id="@+id/etTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="100"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tbtotal"
+        app:layout_constraintStart_toEndOf="@+id/tbtotal" />
+
+    <SeekBar
+        android:id="@+id/sbTipPercent"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@id/tbPercent"
+        app:layout_constraintStart_toEndOf="@+id/tbPercent"
+        app:layout_constraintTop_toTopOf="@id/tbPercent" />
+
+    <TextView
+        android:id="@+id/etDescription"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Acceptable"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/sbTipPercent"
+        app:layout_constraintStart_toStartOf="@+id/sbTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/sbTipPercent" />
+
+
+
+    <EditText
+        android:id="@+id/etMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@id/tbMembers"
+        app:layout_constraintStart_toEndOf="@+id/tbMembers" />
+
+    <TextView
+        android:id="@+id/etEach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/tbEach"
+        app:layout_constraintStart_toEndOf="@+id/tbEach"
+        app:layout_constraintTop_toTopOf="@id/tbEach" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
